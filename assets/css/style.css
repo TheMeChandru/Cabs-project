@@ -478,6 +478,14 @@ h6 {
   max-height: 500px !important;
 }
 
+.swiper-slide .item h4{
+  padding-left: 10px;
+}
+
+.swiper-slide .item p{
+  padding-left: 10px;
+}
+
 .why-us .img-bg {
   min-height: 500px;
   position: relative;
