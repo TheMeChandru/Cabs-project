@@ -159,6 +159,21 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     });
 
 
+    // Form Script
+
+    function showForm(formType) {
+      const signinForm = document.getElementById('signinForm');
+      const signupForm = document.getElementById('signupForm');
+      
+      if (formType === 'signin') {
+          signinForm.classList.add('active');
+          signupForm.classList.remove('active');
+      } else {
+          signinForm.classList.remove('active');
+          signupForm.classList.add('active');
+      }
+  }
+
  
 
 

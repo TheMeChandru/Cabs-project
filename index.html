@@ -48,14 +48,7 @@
       <a href="index.html" class="logo me-auto"><img src="" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
-        <!-- <ul class="nav__list">
-          <li class="nav__item"><a href="index.html" class="nav__links active">Home</a></li>
-
-          <li class="nav__item"><a href="about.html" class="nav__links"><span>About us</span></a></li>
-          <li class="nav__item"><a href="projects.html" class="nav__links">Cab Services</a></li>
-          <li class="nav__item"><a href="placements.html" class="nav__links">Blog</a></li>
-          <li class="nav__item"><a href="contact.html" class="nav__links">Contact us</a></li>
-        </ul> -->
+        
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -77,12 +70,79 @@
 
       <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center align-items-center">
-          <div class="col-md-6">
+          <div class="col-md-6 pt-5">
+            <div class="container Form-sec">
+              <div class="button-container">
+                  <button onclick="showForm('signin')" class="round-trip">Round Trip Outstation Cab</button>
+                  <button onclick="showForm('signup')" class="oneway-trip">Oneway Outstation Cab</button>
+              </div>
+      
+              <form id="signinForm" action="car_list.php" method="post" class="active">
+                  <div class="form-group">
+                      <label for="location">FROM:</label>
+                      <input type="text" name="location" id="location" placeholder="Start typing city-e.g. Bengaluru" required>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="to_location">TO: </label>
+                      <input type="text" name="to_location" id="to_location" placeholder="Start typing city-e.g. Mysuru" required>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="data_from">PICK-UP DATE:</label>
+                      <input type="date" onkeydown="return false" name="data_from" id="data_from" placeholder="Enter Pick-up date" required>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="data_to">DROP-OFF DATE:</label>
+                      <input type="date" onkeydown="return false" name="data_to" id="data_to" placeholder="Enter Drop-off date" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="appt">Select a time:</label>
+<input type="time" id="appt" name="appt">
+                </div>
+
+                  <div class="form-group">
+                    <label for="location">Ph No.</label>
+                    <input type="text" name="location" id="location" placeholder="Enter Your Ph. No" required>
+                </div>
+      
+                  <button type="submit">Search Cabs</button>
+              </form>
+      
+              <form id="signupForm" action="/signup" method="post" class="">
+                  <div class="form-group">
+                    <label for="location">FROM:</label>
+                    <input type="text" name="location" id="location" placeholder="Start typing city-e.g. Bengaluru" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="to_location">TO: </label>
+                    <input type="text" name="to_location" id="to_location" placeholder="Start typing city-e.g. Mysuru" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="data_from">PICK-UP DATE:</label>
+                    <input type="date" onkeydown="return false" name="data_from" id="data_from" placeholder="Enter Pick-up date" required>
+                </div>
+                <div class="form-group">
+                  <label for="appt">Select a time:</label>
+<input type="time" id="appt" name="appt">
+              </div>
+
+                <div class="form-group">
+                  <label for="location">Ph No.</label>
+                  <input type="text" name="location" id="location" placeholder="Enter Your Ph. No" required>
+              </div>
+                  
+                  <button type="submit">Search Cabs</button>
+              </form>
+          </div>
           </div>
           <div class="col-md-6 ">
             <h2>Lets Book Your Cabs </h2>
             <p>Best Prices Guaranteed</p><br>
-            <h2><i class="bi bi-telephone-fill"></i>  07969290208, (+91)7760425086</h2>
+            <h2><i class="bi bi-telephone-fill"></i>(+91) <a href="tel: 7760425086"> 7760425086</a> ,<a href="tel:07969290208"> 07969290208 </a> </h2>
 
           </div>
           
@@ -93,67 +153,24 @@
 
   <div class="container">
 
-    <div class="row g-0">
+    <div class="row g-0 justify-content-between">
 
-      <div class="col-xl-5 img-bg" data-aos="fade-up" data-aos-delay="100">
-        <img src="assets/img/abt1-img.jpg" alt="" class="img-fluid">
+      <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/abt1-img.jpg" class="img-fluid" alt="">
       </div>
 
-      <div class="col-xl-7 slides position-relative" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "centeredSlides": true,
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="item">
-                <h3 class="mb-3">Why Us</h3>
-                <h4 class="mb-3 ">Optio reiciendis accusantium iusto architecto at quia minima maiores quidem, dolorum.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ipsam perferendis asperiores explicabo vel tempore velit totam, natus nesciunt accusantium dicta quod quibusdam ipsum maiores nobis non, eum. Ullam reiciendis dignissimos laborum aut, magni voluptatem velit doloribus quas sapiente optio.</p>
-              </div>
-            </div><!-- End slide item -->
-
-            <div class="swiper-slide">
-              <div class="item">
-                <h3 class="mb-3">Explore Places with us</h3>
-                <h4 class="mb-3">Amet cumque nam sed voluptas doloribus iusto. Dolorem eos aliquam quis.</h4>
-                <p>Dolorem quia fuga consectetur voluptatem. Earum consequatur nulla maxime necessitatibus cum accusamus. Voluptatem dolorem ut numquam dolorum delectus autem veritatis facilis. Et ea ut repellat ea. Facere est dolores fugiat dolor.</p>
-              </div>
-            </div><!-- End slide item -->
-
-            <div class="swiper-slide">
-              <div class="item">
-                <h3 class="mb-3">Aliquid non alias minus</h3>
-                <h4 class="mb-3">Necessitatibus voluptatibus explicabo dolores a vitae voluptatum.</h4>
-                <p>Neque voluptates aut. Soluta aut perspiciatis porro deserunt. Voluptate ut itaque velit. Aut consectetur voluptatem aspernatur sequi sit laborum. Voluptas enim dolorum fugiat aut.</p>
-              </div>
-            </div><!-- End slide item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
+      <div class="col-lg-5 order-1 order-lg-2 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="content">
+          <h3>MapCabs is Best Taxi Service Online</h3>
+          <p>
+            Mapcabs is spread all across the nation. Car rentals made easy, quick and cost-effective with us. Booking car rentals online are nowadays convenience and we’re your trusted partner for this purpose. You will find many car rentals deals with us for all major cities and other locations all across India. Taxi booking is very safe and user-friendly from us. We've got the best cars from all brands to cater well to your purpose. We can offer the best monthly car rental deal for you too. Currently, Mapcabs is available in the cities Amritsar, Aurangabad, Bangalore, Pune, Mumbai, Chennai, Madurai, Mysore, Nagpur, Chandigarh, Delhi, Pondicherry, and Lucknow. Our intercity and intertown deals definitely serve well to your purpose and fit well into your budget.
+          </p>
+          <!-- <a href="#" class="btn more-btn">Learn More</a> -->
         </div>
+      </div>
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+
+        
       </div>
 
     </div>
@@ -165,7 +182,7 @@
 
 <!-- Explore With us Section -->
 <!-- Features Details Section -->
-<section id="features-details" class="features-details section">
+<section id="features-details" class="features-details section pt-5">
 
   <div class="container">
 
@@ -177,10 +194,9 @@
 
       <div class="col-lg-5 order-2 order-lg-1 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
         <div class="content">
-          <h3>Corporis temporibus maiores provident</h3>
+          <h3>Car Rental Deals with Mapcabs Always Lucrative</h3>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            Car rental deals with us vary from place to place in order to match well to our customers’ expectations. If cheap cabs or cheap car rentals is your interest, then we can be of help to it without compromising on the cab standards. Budget car rentals with us will be the best match for your requirement. Car rentals with us are gaining good attention due to the availability of all your favourite car models. Just come with us with your interest and we've got that car keys with us to rent it to you. Taxi booking with us is available for your all types of needs like airport taxi, taxi online and many more. Car rentals with Mapcabs are always trustworthy besides addressing well your best interest too.
           </p>
           <a href="#" class="btn more-btn">Learn More</a>
         </div>
@@ -193,15 +209,10 @@
       <div class="col-lg-5 d-flex align-items-center order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
 
         <div class="content">
-          <h3>Neque ipsum omnis sapiente quod quia dicta</h3>
+          <h3>Taxi Online Quick and Effective with Mapcabs</h3>
           <p>
-            Quidem qui dolore incidunt aut. In assumenda harum id iusto lorena plasico mares
+            Mapcabs taxi online booking is quite simple besides with a facility to book through calling on the phone too. Our budget car rental feature enables the best low rate for you instantly. Here, the low rate with us doesn’t turn into standards compromise on the vehicle too. We provide the best car of your interest at the lowest price. This is making us car rentals specialist online. Very soon we’re spreading into other areas of the country to reach every customer. We’re always at reach online besides being available on phone too. Your travel experience in our cabs is always safe and privacy enriched besides being cost effective too.
           </p>
-          <ul>
-            <li><i class="bi bi-easel flex-shrink-0"></i> Et corporis ea eveniet ducimus.</li>
-            <li><i class="bi bi-patch-check flex-shrink-0"></i> Exercitationem dolorem sapiente.</li>
-            <li><i class="bi bi-brightness-high flex-shrink-0"></i> Veniam quia modi magnam.</li>
-          </ul>
           <p></p>
           <a href="#" class="btn more-btn">Learn More</a>
         </div>
@@ -237,24 +248,23 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4><a href="" class="stretched-link">Round Trip Outstation Cab</a></h4>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4><a href="" class="stretched-link">Oneway Outstation Cab</a></h4>
+              
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="" class="stretched-link">Best Prices and with offer</a></h4>
+              
             </div>
           </div><!-- End Service Item -->
 
@@ -262,7 +272,7 @@
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
               <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <p>24/7 Customer Care</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -286,7 +296,7 @@
             <div class="text-center">
               <h3>24/7 Contact Support</h3>
               <p>Feel free to Contact us</p>
-              <a class="cta-btn" href="#">Call us </a>
+              <a class="cta-btn" href="tel:07969290208">Call us </a>
             </div>
           </div>
         </div>
@@ -451,71 +461,86 @@
 
     <!-- Footer Section Start -->
 
-    <footer id="footer" class="footer">
-  
-      <div class="container footer-top">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="d-flex align-items-center">
-              <span class="sitename">MAPCABS</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>MAPCABS PRIVATE LIMITED</p>
-              <p>3rd Floor, Tushar Arcade, Service Road,Naagarabhaavi
-                Bengaluru, Karnataka 560072</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>(+91)7760425086, 07969290208</span></p>
-              <p><strong>Email:</strong> <span><a href="mailto:support@mapcabs.in">support@mapcabs.in</a></span></p>
-            </div>
-          </div>
-  
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Cab Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Blog</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Contact us</a></li>
+    <footer id="footer">
 
-            </ul>
-          </div>
-          
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
 
-  
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Round trip outstation cabs </a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Oneway outstation cab</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Best Prices</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Instant Booking</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">24/7 Customer care</a></li>
-            </ul>
-          </div>
-  
-          <div class="col-lg-4 col-md-12">
-            <h4>Follow Us</h4>
-            <p>On Social Media for daily Updates </p>
-            <div class="social-links d-flex">
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-whatsapp"></i></a>
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <a href="index.html" class="foot-logo me-auto"><img src="" alt=""
+                
+                  class="img-fluid">
+                <h1>MAP<span>CABS</span></h1></a>
+              <p>
+                MAPCABS PRIVATE LIMITED
+3rd Floor, Tushar Arcade, Service Road,Naagarabhaavi
+Bengaluru, Karnataka 560072 <br><br>
+                <strong>Phone:</strong><a href="tel:07969290208">+91 7760425086 , 07969290208  </a><br>
+                <strong>Email:</strong> <a href="mailto:support@mapcabs.in"
+                  class="email">support@mapcabs.in</a><br>
+              </p>
             </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="">Cab Services</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="">Blog</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Round Trip Outstation Cab</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Oneway Outstation Cab</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Best Prices</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Instant Booking</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">24/7 Customer Care</a></li>
+
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>SECURITY</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy Policy Mapcabs</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms & Conditions</a></li>
+              </ul>
+            </div>
+
           </div>
-  
         </div>
       </div>
 
-      <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">MAPCABS</strong><span>All Rights Reserved</span></p>
-        <div class="credits">
-          <a href="">  PRIVACY POLICY | TERMS & CONDITIONS</a>
+      <div class="container d-md-flex py-4">
+
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>MAPCABS</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits"> Designed by <a href="">@MAPCABS</a>
+          </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href=""
+            class="instagram"><i class="bu bi-instagram"></i></a>
+
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-facebook"></i></a>
+
         </div>
       </div>
-
     </footer>
 
- <a href="" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-whatsapp"></i></a>
+    <!-- End Footer -->
+
+
+ <a href="https://wa.me/7760425086/?text=Need to Book Cabs" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-whatsapp"></i></a>
  <a href="tel: 07969290208" class="btn btn-lg btn-primary btn-lg-square rounded-circle call-btn"><i class="bi bi-telephone-outbound"></i></a>
 
 
